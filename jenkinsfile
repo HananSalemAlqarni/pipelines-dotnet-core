@@ -9,17 +9,15 @@ pipeline {
         ARTEFACT_NAME="hello-world.war"
     }
     stages {
-            stage('Validate') {
-                steps {
+        stage('Validate') {
+            steps {
                 
-                    sh "mvn validate"
+                sh "mvn validate"
 
-                    sh "mvn clean"
+                sh "mvn clean"
 
             }
         }
-    
-  
         stage('Bulid') {
             steps {
 
