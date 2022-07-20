@@ -57,7 +57,7 @@ pipeline {
         stage('Publish artefacts to S3 Bucket'){
             steps{
                 sh "aws configure set region us-east-1"
-                sh "aws s3 cp ./target/**.war" "s3://$Aws_S3_Bucket/$ARTEFACT_NAME"
+                sh "aws s3 cp ./target/**.war s3://$Aws_S3_Bucket/$ARTEFACT_NAME"
             }
         }
         stage('Deploy'){
