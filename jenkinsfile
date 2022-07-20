@@ -62,7 +62,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                echo "Last Stage"
+                echo "Last Stage."
 
             }
 
