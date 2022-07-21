@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     stages {
@@ -7,12 +8,8 @@ pipeline {
                 sh "dotnet restore"
             }
         }
-        stage('Test') {
-            steps {
-                
-                sh "dotent test"
-
-            }
+    
+  
         stage('Bulid') {
             steps {
 
@@ -33,5 +30,4 @@ pipeline {
             }
         }
     }
-}
 }
