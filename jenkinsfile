@@ -4,9 +4,7 @@ pipeline {
         stage('Validate') {
             steps {
 
-                sh "mvn validate"
-
-                sh "mvn clean"
+                sh "dotnet restore"
             }
         }
     
@@ -14,13 +12,13 @@ pipeline {
         stage('Bulid') {
             steps {
 
-                sh "mvn compile"
+                sh "dotnet build "
             }
         }
-        stage('Package') {
+        stage('Package Publish') {
             steps {
 
-                sh "mvn package"
+                sh "dotnet publish "
             }
 
 
