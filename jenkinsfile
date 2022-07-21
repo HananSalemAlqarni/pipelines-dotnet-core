@@ -21,7 +21,19 @@ pipeline {
 
             }
 
-        }  
+        }
+
+        stage('Quality Scan'){
+            steps {
+                sh 'dotnet-sonarscanner begin /k:"dotnet-sample-project" /d:sonar.host.url="http://$SONAR_IP"  /d:sonar.login="$SONAR_TOKEN"'
+
+                sh 'dotnet build'
+
+                sh 'dotnet sonarscanner end /d:sonar.login="sqp_15034a27600642cd553c66a3f7027b9618b3d739"'
+            }
+        }
+    
+  
         stage('Bulid') {
             steps {
 
