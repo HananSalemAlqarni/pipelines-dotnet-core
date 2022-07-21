@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -11,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 
-                sh "mvn test"
+                sh "dotent test"
 
             }
         stage('Bulid') {
@@ -34,4 +33,5 @@ pipeline {
             }
         }
     }
+}
 }
