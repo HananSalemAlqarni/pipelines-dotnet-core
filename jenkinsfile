@@ -25,9 +25,11 @@ pipeline {
 
         stage('Quality Scan'){
             steps {
-                sh '''dotnet sonarscanner begin /k:"piplinedonet-jenkies" /d:sonar.host.url="http://54.226.50.200"  /d:sonar.login="sqp_15034a27600642cd553c66a3f7027b9618b3d739"
-                        dotnet build
-                        dotnet sonarscanner end /d:sonar.login="sqp_15034a27600642cd553c66a3f7027b9618b3d739"'''
+                sh '''
+                    dotnet sonarscanner begin /k:"piplinedonet-jenkies" /d:sonar.host.url="http://54.226.50.200"  /d:sonar.login="sqp_15034a27600642cd553c66a3f7027b9618b3d739"/
+                    dotnet build/
+                    dotnet sonarscanner end /d:sonar.login="sqp_15034a27600642cd553c66a3f7027b9618b3d739"
+                  '''
             }
         }
     
