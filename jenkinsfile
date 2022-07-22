@@ -10,7 +10,7 @@ pipeline {
             ARTIFACT_NAME = "pipelines-dotnet-core.dll"
             AWS_EB_APP_NAME = "dotnet-webapp2"
             AWS_EB_APP_VERSION = "${BUILD_ID}"
-            AWS_EB_ENVIRONMENT = "dotnetwebapp2-env"
+            AWS_EB_ENVIRONMENT = "dotnetwebapp2"
 
         }
     stages {
