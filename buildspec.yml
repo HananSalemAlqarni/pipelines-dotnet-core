@@ -10,12 +10,12 @@ phases:
     commands:
     - echo Build start on 'date'
     - dotnet restore
+    - dotnet build
     - echo Build ends on 'date'
   build:
     on-failure: ABORT
     commands:
     - echo Build start on 'date'
-    - dotnet build
     - dotnet test
     - echo Build ends on 'date'
   post_build:
