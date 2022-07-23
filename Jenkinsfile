@@ -36,7 +36,7 @@ pipeline {
 
             post {
                 success {
-                    archiveArtifacts artifacts: 'bin/Debug/net6.0/pipelines-dotnet-core.dll', followSymlinks: false
+                    archiveArtifacts artifacts: '**/bin/Debug/net6.0/**.dll', followSymlinks: false
        
                 }
             }
