@@ -6,11 +6,11 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
 
-        AWS_S3_BUCKET = "dotnet-eb2-pipline"
+        AWS_S3_BUCKET = "dotnet-eb"
         ARTIFACT_NAME = "pipelines-dotnet-core.dll"
-        AWS_EB_APP_NAME = "pipline-dotnet-EB"
+        AWS_EB_APP_NAME = "dotnet-codebuild-eb1"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Piplinedotneteb-env"
+        AWS_EB_ENVIRONMENT = "Dotnetcodebuildeb1-env"
 
     }
 
