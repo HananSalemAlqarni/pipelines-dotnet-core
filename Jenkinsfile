@@ -10,7 +10,7 @@ pipeline {
         ARTIFACT_NAME = "pipelines-dotnet-core.dll"
         AWS_EB_APP_NAME = "dotnet-codebuild-eb1"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Dotnetcodebuildeb1-env"
+        AWS_EB_ENVIRONMENT = "Dotnetcodebuildeb1-env-1"
 
     }
 
