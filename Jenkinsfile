@@ -8,9 +8,9 @@ pipeline {
 
         AWS_S3_BUCKET = "dotnet-eb2-pipline"
         ARTIFACT_NAME = "pipelines-dotnet-core.dll"
-        AWS_EB_APP_NAME = "pipline-dotnet-EB2"
+        AWS_EB_APP_NAME = "pipline-dotnet-EB"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Piplinedotneteb2-env"
+        AWS_EB_ENVIRONMENT = "Piplinedotneteb-env"
 
     }
 
